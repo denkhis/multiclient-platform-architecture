@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="utility-tree" name="Utility Tree">
+        <mxGraphModel dx="2385" dy="1635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="performance" value="&lt;div style=&quot;text-align:center;&quot;&gt;Performance&lt;br&gt;efficiency&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=18;fontColor=#1F2937;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="90" width="210" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="security" value="Security" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=18;fontColor=#1F2937;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="370" width="210" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="reliability" value="Reliability" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=18;fontColor=#1F2937;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="650" width="210" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="performance-api" value="&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;&lt;b&gt;API response&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;500 concurrent requests&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&amp;nbsp;p95 &amp;lt; 300 ms &lt;/span&gt;&lt;b style=&quot;background-color: transparent; color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;(M,H)&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=16;fontColor=#1F2937;align=center;verticalAlign=middle;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="50" width="410" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="performance-payment" value="&lt;div style=&quot;text-align:center;&quot;&gt;&lt;b&gt;Payment acceptance time&lt;/b&gt;&lt;br&gt;&lt;br&gt;When a payment is submitted, it is persisted with an ID and processing status in p95 below 500 ms. &lt;b&gt;(H,H)&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=16;fontColor=#1F2937;align=center;verticalAlign=middle;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="170" width="410" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="security-mfa" value="&lt;div style=&quot;text-align:center;&quot;&gt;&lt;b&gt;Multi-factor authentication&lt;/b&gt;&lt;br&gt;&lt;br&gt;A new-device login requires a password and one-time code; no token is issued without a valid second factor. &lt;b&gt;(H,M)&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=16;fontColor=#1F2937;align=center;verticalAlign=middle;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="330" width="410" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="security-bruteforce" value="&lt;div style=&quot;text-align:center;&quot;&gt;&lt;b&gt;Brute-force protection&lt;/b&gt;&lt;br&gt;&lt;br&gt;More than 5 failed logins in 15 min block the account for 15 min and issue no access token. &lt;b&gt;(H,L)&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=16;fontColor=#1F2937;align=center;verticalAlign=middle;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="460" width="410" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="reliability-idempotency" value="&lt;div style=&quot;text-align:center;&quot;&gt;&lt;b&gt;Idempotent payment submission&lt;/b&gt;&lt;br&gt;&lt;br&gt;A repeated request with the same idempotency key creates no duplicate payment. &lt;b&gt;(H,H)&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=16;fontColor=#1F2937;align=center;verticalAlign=middle;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="610" width="410" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="reliability-bank" value="&lt;div style=&quot;text-align:center;&quot;&gt;&lt;b&gt;Bank gateway failure recovery&lt;/b&gt;&lt;br&gt;&lt;br&gt;After a bank API timeout, the payment remains processing and retries automatically until final bank status. &lt;b&gt;(H,H)&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#A78BFA;fontSize=16;fontColor=#1F2937;align=center;verticalAlign=middle;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="740" width="410" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-performance-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;" parent="1" source="performance" target="performance-api" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-performance-payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;" parent="1" source="performance" target="performance-payment" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-security-mfa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;" parent="1" source="security" target="security-mfa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-security-bruteforce" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;" parent="1" source="security" target="security-bruteforce" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-reliability-idempotency" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;" parent="1" source="reliability" target="reliability-idempotency" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-reliability-bank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;" parent="1" source="reliability" target="reliability-bank" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
