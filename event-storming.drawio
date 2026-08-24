@@ -1,0 +1,241 @@
+<mxfile host="Electron">
+  <diagram id="expense-reimbursement-event-storming" name="Expense Reimbursement">
+    <mxGraphModel dx="2444" dy="1766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="980" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=26;fontColor=#111827;align=left;verticalAlign=middle;" value="&lt;b&gt;Event Storming: Personal Expense Reimbursement&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4B5563&quot; style=&quot;font-size:15px&quot;&gt;Narrow MVP · primary happy path · clusters as Bounded Context candidates&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-actor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="Actor" vertex="1">
+          <mxGeometry height="42" width="120" x="40" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-policy" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="Policy" vertex="1">
+          <mxGeometry height="42" width="120" x="180" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-external" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="External System" vertex="1">
+          <mxGeometry height="42" width="150" x="320" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-command" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="Command" vertex="1">
+          <mxGeometry height="42" width="120" x="490" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-event" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="Domain Event" vertex="1">
+          <mxGeometry height="42" width="150" x="630" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-employee-details" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;" value="&lt;b&gt;Employee&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="70" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="command-set-details" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Provide compensation bank details" vertex="1">
+          <mxGeometry height="75" width="220" x="50" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-details-set" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Compensation bank details provided&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="40" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-employee-receipt" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;" value="&lt;b&gt;Employee&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="370" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="command-attach-receipt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Attach receipt photo" vertex="1">
+          <mxGeometry height="75" width="220" x="350" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-receipt-attached" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Receipt attached to claim&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="340" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-employee-submit" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;" value="&lt;b&gt;Employee&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="670" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="command-submit-claim" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Submit compensation claim" vertex="1">
+          <mxGeometry height="75" width="220" x="650" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-claim-submitted" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Compensation claim submitted&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="640" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-accountant-approve" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;" value="&lt;b&gt;Accountant&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="970" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="command-approve-claim" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Approve compensation claim" vertex="1">
+          <mxGeometry height="75" width="220" x="950" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-claim-approved" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Compensation claim approved&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="940" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-accountant-payment" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;" value="&lt;b&gt;Accountant&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="1270" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="command-create-payment" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Create employee compensation payment" vertex="1">
+          <mxGeometry height="75" width="220" x="1250" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-payment-created" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Compensation payment created&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="1240" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="policy-send-payment" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="When payment is created" vertex="1">
+          <mxGeometry height="65" width="190" x="1565" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="command-send-payment" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Send payment to bank" vertex="1">
+          <mxGeometry height="75" width="220" x="1550" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-payment-sent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Payment sent to bank&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="1540" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="external-bank" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Banking / Payment System&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="220" x="1850" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="command-confirm-payment" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Confirm payment completion" vertex="1">
+          <mxGeometry height="75" width="220" x="1850" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-payment-completed" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Payment completed&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="1840" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="policy-record-reimbursement" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="When payment is completed" vertex="1">
+          <mxGeometry height="65" width="190" x="2165" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="command-record-reimbursement" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Record compensation payout" vertex="1">
+          <mxGeometry height="75" width="220" x="2150" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-reimbursement-paid" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Compensation paid&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="2140" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="policy-notify-employee" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="When compensation is paid" vertex="1">
+          <mxGeometry height="65" width="210" x="2455" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="command-notify-employee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="Send push notification to employee" vertex="1">
+          <mxGeometry height="75" width="220" x="2450" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="event-employee-notified" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8A13F;strokeColor=#C86A00;fontSize=15;fontColor=#111827;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Employee notified of payment&lt;/b&gt;" vertex="1">
+          <mxGeometry height="105" width="240" x="2440" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-to-command-1" edge="1" parent="1" source="actor-employee-details" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="command-set-details" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-1" edge="1" parent="1" source="command-set-details" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-details-set" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-to-command-2" edge="1" parent="1" source="actor-employee-receipt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="command-attach-receipt" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-2" edge="1" parent="1" source="command-attach-receipt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-receipt-attached" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-to-command-3" edge="1" parent="1" source="actor-employee-submit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="command-submit-claim" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-3" edge="1" parent="1" source="command-submit-claim" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-claim-submitted" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-to-command-4" edge="1" parent="1" source="actor-accountant-approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="command-approve-claim" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-4" edge="1" parent="1" source="command-approve-claim" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-claim-approved" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-to-command-5" edge="1" parent="1" source="actor-accountant-payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="command-create-payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-5" edge="1" parent="1" source="command-create-payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-payment-created" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="policy-to-command-6" edge="1" parent="1" source="policy-send-payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673A6;" target="command-send-payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-6" edge="1" parent="1" source="command-send-payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-payment-sent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="external-to-command-7" edge="1" parent="1" source="external-bank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="command-confirm-payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-7" edge="1" parent="1" source="command-confirm-payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-payment-completed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="policy-to-command-8" edge="1" parent="1" source="policy-record-reimbursement" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673A6;" target="command-record-reimbursement" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-8" edge="1" parent="1" source="command-record-reimbursement" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-reimbursement-paid" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="policy-to-command-9" edge="1" parent="1" source="policy-notify-employee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673A6;" target="command-notify-employee" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="command-to-event-9" edge="1" parent="1" source="command-notify-employee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6B7280;" target="event-employee-notified" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-1" edge="1" parent="1" source="event-details-set" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-receipt-attached" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-2" edge="1" parent="1" source="event-receipt-attached" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-claim-submitted" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-3" edge="1" parent="1" source="event-claim-submitted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-claim-approved" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-4" edge="1" parent="1" source="event-claim-approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-payment-created" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-5" edge="1" parent="1" source="event-payment-created" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-payment-sent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-6" edge="1" parent="1" source="event-payment-sent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-payment-completed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-7" edge="1" parent="1" source="event-payment-completed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-reimbursement-paid" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-flow-8" edge="1" parent="1" source="event-reimbursement-paid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="event-employee-notified" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-payments-details" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E7CC3;strokeColor=#8E7CC3;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="40" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-payments-details" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#674EA7;align=center;verticalAlign=middle;" value="&lt;b&gt;Payments&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="40" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-compensations-receipt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3D85C6;strokeColor=#3D85C6;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="340" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-compensations-receipt" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#0B5394;align=center;verticalAlign=middle;" value="&lt;b&gt;Compensations&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="340" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-compensations-submitted" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3D85C6;strokeColor=#3D85C6;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="640" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-compensations-submitted" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#0B5394;align=center;verticalAlign=middle;" value="&lt;b&gt;Compensations&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="640" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-compensations-approved" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3D85C6;strokeColor=#3D85C6;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="940" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-compensations-approved" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#0B5394;align=center;verticalAlign=middle;" value="&lt;b&gt;Compensations&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="940" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-payments-created" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E7CC3;strokeColor=#8E7CC3;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="1240" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-payments-created" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#674EA7;align=center;verticalAlign=middle;" value="&lt;b&gt;Payments&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="1240" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-payments-sent" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E7CC3;strokeColor=#8E7CC3;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="1540" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-payments-sent" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#674EA7;align=center;verticalAlign=middle;" value="&lt;b&gt;Payments&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="1540" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-payments-completed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E7CC3;strokeColor=#8E7CC3;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="1840" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-payments-completed" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#674EA7;align=center;verticalAlign=middle;" value="&lt;b&gt;Payments&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="1840" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-compensations-paid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3D85C6;strokeColor=#3D85C6;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="2140" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-compensations-paid" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#0B5394;align=center;verticalAlign=middle;" value="&lt;b&gt;Compensations&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="2140" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-bar-notifications" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C90076;strokeColor=#C90076;" value="" vertex="1">
+          <mxGeometry height="12" width="240" x="2440" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-name-notifications" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#A50062;align=center;verticalAlign=middle;" value="&lt;b&gt;Notifications&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="2440" y="615" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
