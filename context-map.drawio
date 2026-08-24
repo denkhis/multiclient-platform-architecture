@@ -1,0 +1,57 @@
+<mxfile host="Electron">
+  <diagram id="expense-reimbursement-context-map" name="Context Map">
+    <mxGraphModel dx="1358" dy="981" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontColor=#111827;align=left;verticalAlign=middle;" value="&lt;b&gt;Context Map: Personal Expense Reimbursement&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4B5563&quot; style=&quot;font-size:15px&quot;&gt;Narrow MVP · relationships between Bounded Contexts and external systems&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="1050" x="50" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-bc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=2;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="Bounded Context" vertex="1">
+          <mxGeometry height="44" width="160" x="50" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-external" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#6B7280;dashed=1;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="External System" vertex="1">
+          <mxGeometry height="44" width="160" x="230" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-acl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#8E7CC3;fontSize=13;fontColor=#111827;align=center;verticalAlign=middle;" value="ACL" vertex="1">
+          <mxGeometry height="44" width="100" x="410" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="internal-area" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#D1D5DB;dashed=1;fontSize=15;fontColor=#6B7280;align=left;verticalAlign=top;spacingTop=12;spacingLeft=14;" value="&lt;b&gt;Core Backend · modular monolith&lt;/b&gt;" vertex="1">
+          <mxGeometry height="760" width="1050" x="50" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="external-area" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D1D5DB;dashed=1;fontSize=15;fontColor=#6B7280;align=left;verticalAlign=top;spacingTop=12;spacingLeft=14;" value="&lt;b&gt;External systems&lt;/b&gt;" vertex="1">
+          <mxGeometry height="760" width="560" x="1170" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="compensations" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF5FB;strokeColor=#3D85C6;strokeWidth=3;fontSize=16;fontColor=#111827;align=center;verticalAlign=middle;spacing=12;" value="&lt;b&gt;Compensations&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4B5563&quot; style=&quot;font-size:13px&quot;&gt;claims · receipts · amounts · categories&lt;br&gt;approval decisions · payout status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="360" x="160" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="payments" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F0FA;strokeColor=#8E7CC3;strokeWidth=3;fontSize=16;fontColor=#111827;align=center;verticalAlign=middle;spacing=12;" value="&lt;b&gt;Payments&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4B5563&quot; style=&quot;font-size:13px&quot;&gt;recipient · bank details · payment&lt;br&gt;submission · bank status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="360" x="640" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="notifications" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCEEF6;strokeColor=#C90076;strokeWidth=3;fontSize=16;fontColor=#111827;align=center;verticalAlign=middle;spacing=12;" value="&lt;b&gt;Notifications&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4B5563&quot; style=&quot;font-size:13px&quot;&gt;recipient · push channel&lt;br&gt;message · delivery status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="360" x="400" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="banking-system" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#6B7280;strokeWidth=2;dashed=1;fontSize=16;fontColor=#111827;align=center;verticalAlign=middle;spacing=12;" value="&lt;b&gt;Banking / Payment System&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4B5563&quot; style=&quot;font-size:13px&quot;&gt;external payment model and API&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="360" x="1270" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="push-provider" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#6B7280;strokeWidth=2;dashed=1;fontSize=16;fontColor=#111827;align=center;verticalAlign=middle;spacing=12;" value="&lt;b&gt;Notification Service&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4B5563&quot; style=&quot;font-size:13px&quot;&gt;external push provider&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="360" x="1270" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="payments-to-compensations" edge="1" parent="1" source="payments" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#D79B00;strokeWidth=3;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="compensations" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="compensations-to-notifications" edge="1" parent="1" source="compensations" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#D79B00;strokeWidth=3;fontSize=13;fontColor=#7F6000;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.25;entryY=0;" target="notifications" value="">
+          <mxGeometry relative="1" x="-0.4054" y="-15" as="geometry">
+            <mxPoint x="-15" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bank-to-payments" edge="1" parent="1" source="banking-system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8E7CC3;strokeWidth=3;fontSize=13;fontColor=#674EA7;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="payments" value="&lt;b&gt;ACL&lt;/b&gt; at Payments&lt;br&gt;&lt;font color=&quot;#4B5563&quot;&gt;BankingGateway / adapter&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="push-to-notifications" edge="1" parent="1" source="push-provider" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8E7CC3;strokeWidth=3;fontSize=13;fontColor=#674EA7;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="notifications" value="&lt;b&gt;ACL&lt;/b&gt; at Notifications&lt;br&gt;&lt;font color=&quot;#4B5563&quot;&gt;PushProviderGateway / adapter&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
